@@ -124,4 +124,4 @@ CDN (Content Delivery Network) là một công nghệ cung cấp cách thức đ
 
 **Lời Kết**
 
-Hy vọng qua bài viết này, các bạn đã có một cái nhìn tổng quan nhất về kiến trúc của ứng dụng web. Đây là những điều cơ bản nhất mà một nhà phát triển web cần biết để có thể hiểu hơn về hệ thống của mình. Hẹn gặp lại các bạn vào các bài viết sau :
+Hy vọng qua bài viết này, các bạn đã có một cái nhìn tổng quan nhất về kiến trúc của ứng dụng web. Đây là những điều cơ bản nhất mà một nhà phát triển web cần biết để có thể hiểu hơn về hệ thống của mình. Hẹn gặp lại các bạn vào các bài viết sau :D
