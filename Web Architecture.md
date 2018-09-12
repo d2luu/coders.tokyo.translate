@@ -2,7 +2,7 @@
 
 #### *Những khái niệm kiến trúc cơ bản nên biết khi bắt đầu sự nghiệp như một nhà phát triển web*
 
-![](https://cdn-images-1.medium.com/max/1600/1*K6M-x-6e39jMq_c-2xqZIQ.png)
+![](https://res.cloudinary.com/djeghcumw/image/upload/v1536718655/blog/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a4b364d2d782d366533396a4d715f632d3278715a49512e706e67.png)
 
 Sơ đồ trên thể hiện khá tốt về kiến trúc web của chúng tôi tại [Storyblocks](https://www.storyblocks.com/). Nếu bạn không phải là một nhà phát triển web có kinh nghiệm, bạn sẽ thấy nó khá phức tạp. Đừng lo lắng, những nội dung dưới đây sẽ làm cho nó dễ tiếp cận hơn khi đi vào chi tiết của mỗi thành phần.
 
@@ -46,7 +46,7 @@ Mặc dù tôi tránh đi sâu vào các công nghệ cho từng thành phần, 
 
 SQL - Structured Query Language là ngôn ngữ truy vấn dữ liệu theo cấu trúc, được phát minh vào những năm 1970, cung cấp những quy chuẩn chung để truy vấn dữ liệu quan hệ. Cơ sở dữ liệu SQL lưu trữ dữ liệu dưới dạng bảng và các bảng được liên kết với nhau qua các khoá. Dưới đây là một ví dụ đơn giản cho cơ sở dữ liệu SQL. Bạn có thể thấy ở đây có 2 bảng là users và user_addresses, chúng được liên kết với nhau qua trường id của user vì ta thấy cột user_id trong bảng user_addresses là "khoá ngoài" trỏ tới cột id trong bảng user.  
 
-  ![](https://cdn-images-1.medium.com/max/1600/1*Ln39QPggpJVMAScUBsrcCQ.png)
+  ![](https://res.cloudinary.com/djeghcumw/image/upload/v1536718721/blog/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a4c6e333951506767704a564d415363554273726343512e706e67.png)
 
 NoSQL là một công nghệ cơ sở dữ liệu mới hơn đã nổi lên gần đây để xử lý một lượng lớn dữ liệu có thể được tạo ra bởi các ứng dụng web quy mô lớn (hầu hết các biến thể của SQL không thể mở rộng theo chiều ngang tốt và chỉ có thể mở rộng theo chiều dọc đến một mức độ nhất định). Ở đây tôi có thể giới thiệu cho bạn một số nguồn tài nguyên để có thể tìm hiểu sâu hơn về NoSQL:
 
@@ -80,7 +80,7 @@ Lấy ví dụ tại Storyblocks, chúng tôi tận dụng job queue cho rất n
 
 Nhiều ứng dụng web có hỗ trợ việc tìm kiếm, nơi người dùng nhập văn bản (thường được gọi là truy vấn) và ứng dụng trả về các kết quả có liên quan nhiều nhất. Công nghệ để thực hiện việc này chính là "full-text seach", cái mà sử dụng các chỉ mục đảo ngược để nhanh chóng tra cứu các tài liệu chứa từ khoá truy vấn.
 
-![](https://cdn-images-1.medium.com/max/1600/1*gun_BpdDH9KrNna1NnaocA.png)
+![](https://res.cloudinary.com/djeghcumw/image/upload/v1536719033/blog/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a67756e5f4270644448394b724e6e61314e6e616f63412e706e67.png)
 
   *Ví dụ cho thấy cách thức mà ba tiêu đề của tài liệu (trong bảng Document) được đảo ngược thành một bảng có chỉ mục đảo ngược (trong bảng Inverted Index) để tạo điều kiện tra cứu nhanh từ một từ khoá cụ thể đến các từ khoá có trong tiêu đề đó. Lưu ý, các từ như "in", "the", "with", ... (thường được gọi là từ dừng - stop word) thường sẽ không được liệt kê trong bảng Inverted Index*
 
@@ -118,7 +118,7 @@ Theo AWS: "Cloud storage là một cách đơn giản và dễ mở rộng để
 
 CDN (Content Delivery Network) là một công nghệ cung cấp cách thức để chia sẻ những tài nguyên "tĩnh" như HTML, CSS, Javascript và ảnh một cách nhanh nhất có thể, hơn là việc sẽ phải phục vụ từ máy chủ gốc chứa tài nguyên đó. Nó hoạt động bằng cách phân phối nội dung thông qua rất nhiều máy chủ (edge servers) được đặt trên các vị trí địa lý khác nhau trên toàn thế giới, từ đó, người dùng cuối sẽ tải những tài nguyên này từ các máy chủ ở nơi gần với họ nhất. Lấy ví dụ ở bức ảnh bên dưới, một người dùng ở Tây Ban Nha gửi 1 yêu cầu đến một trang web có máy chủ gốc đặt ở New York, Mỹ  nhưng những tài nguyên tĩnh của trang web đó có thể được tải ở máy chủ CDN đặt tại Anh, giúp tránh việc phải truyền dữ liệu HTTP qua Đại Tây Dương sẽ làm giảm đáng kể tốc độ phản hồi của trang web. 
 
-![](https://cdn-images-1.medium.com/max/1600/1*ZkC_5865Hx-Cgph3iPJghw.png)
+![](https://res.cloudinary.com/djeghcumw/image/upload/v1536719047/blog/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f313630302f312a5a6b435f3538363548782d436770683369504a6768772e706e67.png)
 
 [Xem bài viết này](https://www.creative-artworks.eu/why-use-a-content-delivery-network-cdn/) để được giới thiệu sâu hơn về CDN. Nói chung, một ứng dụng web nên sử dụng CDN để phục vụ các tài nguyên tĩnh như HTML, CSS, Javascript, ảnh, video... vì điều này sẽ cải thiện đáng kể tốc độ duyệt web của người dùng để tạo trải nghiệm tốt hơn.
 
